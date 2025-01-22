@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title></title>
+  <script type="text/javascript">
+     $(document).ready(function() {
+  $('[data-toggle="popover"]').popover({
+    html: true // Enables rendering of HTML content inside the popover
+  });
+});
+  </script>
+	<style type="text/css">
+		header{
+    padding: 10px;
+    background-color:  #3b26b5;
+    color: white;
+  }
+  .navbar-default{
+ 
+ 
+  }
+  header img{
+    margin-top: 15px;
+    width: 50px;
+    height:50px;
+    border-radius: 15px;
+
+
+  }
+   header header{
+    color: black;
+  }
+   
+		 
+		a{
+			color: white;
+		}
+
+		a:hover {
+           color: white;
+}
+
+	</style>
+</head>
+
+<body>
+	<header>
+    <div class="row">
+      <div class="col-sm-11">
+        <h1>Faculty Information System</h1>
+      </div>
+      <div class="col-sm-1"> 
+          <a  href="#" title="Admin Profile" data-toggle="popover" data-placement="bottom" data-content="Name:Touseef<br>ID:123<br>  Email: adnan@gmail.com "><img src="images/20.jpg"></a>
+       
+      </div>
+        
+  </header>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li ><a href=" adminInterface.jsp">Home</a></li>
+          <li><a href="registration.html">New</a></li>
+          <li class="active"><a href="#">Remove</a></li>
+          <li><a href="report.jsp">Report</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button style="margin-top: 8px; background-color:black;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> 
+           <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="changePassword.jsp?&action=admin">Reset Password</a></li>
+              <li><a href="login.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+	<div class="container">
+		<div class="panel-headaing"><h2>Remove</h2></div>
+		 <div class="panel-body">
+						<form action="teacherRemove.jsp" method="POST"   >
+					<div class="form-group"> 
+					 
+					 
+					 <label for="id"><b>Teacher ID </b></label>
+					<input class="form-control" type="number" name="id" placeholder="Enter ID" id="id" required><br>
+					<p>OR</p>
+					<label for="CNIC"><b>CNIC </b></label>
+					<input class="form-control" type="number" name="cnic" placeholder="Enter CNIC" id="CNIC"><br>
+
+					 
+					<button type="submit" class="btn btn-primary btn-block" style="background-color: #5a03fc;">Delete</button>
+					  
+					</div>
+
+				</form>
+					</div>
+	</div>
+
+</body>
+</html>,
